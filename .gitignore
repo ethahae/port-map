@@ -7,6 +7,13 @@
 
 # Test binary, build with `go test -c`
 *.test
+client/client
+server/server
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+### VS Code ###
+.vscode/
+#os x
+*/.DS_Store
+/logs/
