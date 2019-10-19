@@ -17,4 +17,5 @@ server/server
 .vscode/
 #os x
 */.DS_Store
+.DS_Store
 /logs/
