@@ -9,6 +9,7 @@
 *.test
 client/client
 server/server
+/bin
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out

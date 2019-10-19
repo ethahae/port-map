@@ -1,0 +1,17 @@
+LDFLAGS := -s -w
+
+all: build
+
+build:
+	env GOOS=darwin GOARCH=amd64 go build -ldflags "$(LDFLAGS)" -o bin/client_darwin_amd64 ./client
+	env GOOS=darwin GOARCH=amd64 go build -ldflags "$(LDFLAGS)" -o bin/server_darwin_amd64 ./server
+	env GOOS=darwin GOARCH=386 go build -ldflags "$(LDFLAGS)" -o bin/client_darwin_386 ./client
+	env GOOS=darwin GOARCH=386 go build -ldflags "$(LDFLAGS)" -o bin/server_darwin_386 ./server
+	env GOOS=linux GOARCH=amd64 go build -ldflags "$(LDFLAGS)" -o bin/client_linux_amd64 ./client
+	env GOOS=linux GOARCH=amd64 go build -ldflags "$(LDFLAGS)" -o bin/server_linux_amd64 ./server
+	env GOOS=linux GOARCH=386 go build -ldflags "$(LDFLAGS)" -o bin/client_linux_386 ./client
+	env GOOS=linux GOARCH=386 go build -ldflags "$(LDFLAGS)" -o bin/server_linux_386 ./server
+	env GOOS=windows GOARCH=amd64 go build -ldflags "$(LDFLAGS)" -o bin/client_windows_amd64 ./client
+	env GOOS=windows GOARCH=amd64 go build -ldflags "$(LDFLAGS)" -o bin/server_windows_amd64 ./server
+	env GOOS=windows GOARCH=386 go build -ldflags "$(LDFLAGS)" -o bin/client_windows_386 ./client
+	env GOOS=windows GOARCH=386 go build -ldflags "$(LDFLAGS)" -o bin/server_windows_386 ./server
